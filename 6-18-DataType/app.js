@@ -42,3 +42,16 @@
 //     favTv: ['tvtvtv']
 // }]
 
+//Take it Easy
+
+const rainbow = ['red', `orange`, `yellow`, `green`, `blue`,`indigo`,`violet`];
+
+rainbow[4];
+
+const timothy = {
+    favoriteFood: `Thai`,
+    hobby: `Coding`,
+    city: `Austin`,
+    favDataType: `Arrays`
+}
+timothy.hobby;
