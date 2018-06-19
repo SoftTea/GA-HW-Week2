@@ -259,16 +259,27 @@ const bondFilms = [{
 ];
 
 const bondTitles = [];
-for(let i=0; i<bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++) {
     bondTitles.push(bondFilms[i].title);
 }
 
 console.log(bondTitles);
 
 const oddBonds = [];
-for(let i=0; i<bondFilms.length; i++) {
-    if(bondFilms[i].year%2 !== 0) {
+for (let i = 0; i < bondFilms.length; i++) {
+    if (bondFilms[i].year % 2 !== 0) {
         oddBonds.push(bondFilms[i])
     }
 }
-console.log(oddBonds)
+console.log(oddBonds);
+
+const culGross = bondFilms.reduce((accum, curr, currInd) => {
+    const reg = /\W+/g;
+        const currGross = parseInt(curr.gross.replace(reg, ''));
+        console.log(accum)
+        return accum + currGross;
+    
+
+}, 0);
+
+console.log(culGross)
