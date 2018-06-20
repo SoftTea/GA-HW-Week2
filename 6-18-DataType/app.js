@@ -275,11 +275,8 @@ console.log(oddBonds);
 
 const culGross = bondFilms.reduce((accum, curr, currInd) => {
     const reg = /\W+/g;
-        const currGross = parseInt(curr.gross.replace(reg, ''));
-        console.log(accum)
-        return accum + currGross;
-    
-
+    const currGross = parseInt(curr.gross.replace(reg, ''));
+    return accum + currGross;
 }, 0);
 
 console.log(culGross)
