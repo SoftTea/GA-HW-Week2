@@ -101,27 +101,27 @@ const dealDecks = () => {
 
 
 const newHands = () => {
-    if(player.cardsInHandNumber >0) {
+    if (player.cardsInHandNumber > 0) {
 
-        player.cardsInHand.forEach((curr)=>{
+        player.cardsInHand.forEach((curr) => {
             player.discard.push(curr)
         })
         player.cardsInHand = [];
         player.discard.push(player.cardPicked);
         player.cardPicked = {};
         player.cardsInHandNumber = 0;
-        
-        computer.cardsInHand.forEach((curr)=>{
+
+        computer.cardsInHand.forEach((curr) => {
             computer.discard.push(curr)
         })
-        computer.cardsInHand =[];
+        computer.cardsInHand = [];
         computer.discard.push(player.cardPicked);
         computer.cardPicked = {};
         computer.cardsInHandNumber = 0;
     }
     for (let i = 0; i < 3; i++) {
         // Catching to make sure we don't draw infitently (Edge Case)
-        if(player.cardsInDeck.length === 0) {
+        if (player.cardsInDeck.length === 0) {
             return console.log("The Game is Over")
         }
         const randomNumberP = Math.floor(Math.random() * ((player.cardsInDeck.length - 1) + 1));
@@ -142,29 +142,29 @@ const newHands = () => {
 
 
 // player.cardsInHand[i]
-const playFromHand = (indexNum)=>{
+const playFromHand = (indexNum) => {
     player.cardPicked = player.cardsInHand[indexNum];
-    player.cardsInHand.splice(indexNum,1);
+    player.cardsInHand.splice(indexNum, 1);
     player.cardsInHandNumber--
 
-    const randomizer = Math.floor(Math.random()*(2+1));
-    
+        const randomizer = Math.floor(Math.random() * (2 + 1));
+
     computer.cardPicked = computer.cardsInHand[randomizer];
-    computer.cardsInHand.splice(randomizer,1);
+    computer.cardsInHand.splice(randomizer, 1);
     computer.cardsInHandNumber--;
 }
 
-const resolvePlayedCards = ()=>{
-    if(player.cardPicked.damage === computer.cardPicked.damage) {
+const resolvePlayedCards = () => {
+    if (player.cardPicked.damage === computer.cardPicked.damage) {
         console.log(`${player.cardPicked.name} and ${computer.cardPicked.name} are equal matches. It is a draw this round`);
-    } else if( player.cardPicked.damage>computer.cardPicked.damage){
+    } else if (player.cardPicked.damage > computer.cardPicked.damage) {
         console.log(`${player.cardPicked.name} is stronger than ${computer.cardPicked.name}, Player has won`);
         player.score++;
     } else {
         console.log(`${computer.cardPicked.name} is stronger than ${player.cardPicked.name}, Computer has won`);
         computer.score++;
     }
-    if (player.cardsInDeck.length<3) {
+    if (player.cardsInDeck.length < 3) {
         console.log(`The game is over kiddo`)
     }
 }
