@@ -145,9 +145,9 @@ const newHands = () => {
 const playFromHand = (indexNum) => {
     player.cardPicked = player.cardsInHand[indexNum];
     player.cardsInHand.splice(indexNum, 1);
-    player.cardsInHandNumber--
+    player.cardsInHandNumber--;
 
-        const randomizer = Math.floor(Math.random() * (2 + 1));
+    const randomizer = Math.floor(Math.random() * (2 + 1));
 
     computer.cardPicked = computer.cardsInHand[randomizer];
     computer.cardsInHand.splice(randomizer, 1);
