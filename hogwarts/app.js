@@ -132,3 +132,13 @@ const $th11 = $('<th/>');
 $th11.text(' Quidditch practice');
 $tr5.append($th11);
 
+$('#container h2:nth-child(5)').remove();
+
+$('ul li:nth-child(1)').remove();
+
+$('#container h4:nth-child(4)').after($('<h2>New Wand</h2>').css('color', 'indigo'));
+
+$('#container h4:nth-child(4)').remove();
+
+$('ul').before($('<h4/>').attr('class', 'cat').text('Sims'));
+
