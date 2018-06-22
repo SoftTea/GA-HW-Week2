@@ -55,3 +55,80 @@ const $li5 = $('<li/>');
 $li5.text('Bertie Botts Every Flavor Jelly Beans.');
 $ul.append($li5);
 
+const $h5 = $('<h5/>');
+$h5.text("Spring 2017");
+$container.append($h5);
+
+const $table = $('<table/>');
+$container.append($table);
+
+const $tr = $('<tr/>');
+$table.append($tr);
+
+const $th = $('<th/>');
+$th.text('Day');
+$tr.append($th);
+
+const $th1 = $('<th/>');
+$th1.text('Classes');
+$tr.append($th1);
+
+const $tr1 = $('<tr/>');
+$table.append($tr1);
+
+const $th2 = $('<th/>');
+$th2.text('Monday');
+$tr1.append($th2);
+
+const $th3 = $('<th/>');
+$th3.text('Charms, Quidditch practice, History of Magic');
+$tr1.append($th3);
+
+
+const $tr2 = $('<tr/>');
+$table.append($tr2);
+
+const $th4 = $('<th/>');
+$th4.text('Tuesday');
+$tr2.append($th4);
+
+const $th5 = $('<th/>');
+$th5.text('Divination, History of Magic');
+$tr2.append($th5);
+
+
+const $tr3 = $('<tr/>');
+$table.append($tr3);
+
+const $th6 = $('<th/>');
+$th6.text('Wednesday');
+$tr3.append($th6);
+
+const $th7 = $('<th/>');
+$th7.text('History of Magic');
+$tr3.append($th7);
+
+
+const $tr4 = $('<tr/>');
+$table.append($tr4);
+
+const $th8 = $('<th/>');
+$th8.text('Thursday');
+$tr4.append($th8);
+
+const $th9 = $('<th/>');
+$th9.text('Charms');
+$tr4.append($th9);
+
+
+const $tr5 = $('<tr/>');
+$table.append($tr5);
+
+const $th10 = $('<th/>');
+$th10.text('Friday');
+$tr5.append($th10);
+
+const $th11 = $('<th/>');
+$th11.text(' Quidditch practice');
+$tr5.append($th11);
+
