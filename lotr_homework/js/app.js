@@ -248,9 +248,9 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+    $('.buddy:eq(0)').text('Gandalf the White');
   // 2. add a class "the-white" to this element
-
+  $('.buddy:eq(0)').attr('class','the-white');
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
